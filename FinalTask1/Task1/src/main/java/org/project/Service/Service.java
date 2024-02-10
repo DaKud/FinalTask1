@@ -7,9 +7,6 @@ import org.project.Model.RepositoryEdition;
 import java.io.*;
 import java.util.List;
 
-/**
- * класс для работы с репозиторием
- */
 public class Service {
     private RepositoryEdition repositoryEdition;
 
@@ -37,19 +34,11 @@ public class Service {
         return resultSearch;
     }
 
-    /**
-     * сохранение репозитория в файл
-     */
     public void saveRepo(String file) throws IOException {
         ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(file));
         outputStream.writeObject(this.repositoryEdition);
     }
 
-    /**
-     * восстановление БД из файла
-     *
-     * @param file имя файла
-     */
     public void extractRepo(String file) throws IOException, ClassNotFoundException {
         ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(file));
         this.repositoryEdition = (RepositoryEdition) inputStream.readObject();
