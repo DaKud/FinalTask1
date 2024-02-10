@@ -3,9 +3,6 @@ package org.project.View;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * лист для выбора типа издания
- */
 public class ListEdition {
     private static List<FactoryEdition> editionList;
     public ListEdition() {
