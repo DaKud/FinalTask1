@@ -5,7 +5,7 @@ import org.project.View.ConsoleUI;
 public class Finish extends Commands {
 
     public Finish(ConsoleUI consoleUI) {
-        super("Закончить работу", consoleUI);
+        super("Finish", consoleUI);
     }
 
     @Override
