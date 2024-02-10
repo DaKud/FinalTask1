@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * класс для коммуникации с пользователем
- */
-
 public class ConsoleUI implements View {
     private final Scanner scanner;
     private final Presentor presentor;
@@ -50,9 +46,6 @@ public class ConsoleUI implements View {
         }
     }
 
-    /**
-     * добавление объекта в репозиторий
-     */
     public void addEdition() {
         int choiceInt;
         boolean poll = true;
@@ -199,11 +192,6 @@ public class ConsoleUI implements View {
         return widthFilm;
     }
 
-    //endregion Create Eddition
-
-    /**
-     * восстановления данных их файла
-     */
     public void extractRepo() {
         System.out.println("Введите имя архива из которого нужно восстановить данные (без расширения)");
         String nameRepo = scanner.nextLine() + ".txt";
@@ -214,9 +202,6 @@ public class ConsoleUI implements View {
         }
     }
 
-    /**
-     * сохранение репозитория в файл
-     */
     public void saveRepo() {
         System.out.println("Введите имя файла для сохранения (без расширения)");
         String nameRepo = scanner.nextLine() + ".txt";
@@ -228,9 +213,6 @@ public class ConsoleUI implements View {
 
     }
 
-    /**
-     * поиск по автору либо вывод всего списка репозитория. результат выводится на экран
-     */
     public void searchByAuthor() {
         System.out.println("Введите фамилию автора (либо нажмите Enter, для вывода всего списка)");
         String firstName = scanner.nextLine();
@@ -247,9 +229,7 @@ public class ConsoleUI implements View {
         editions.forEach(System.out::println);
     }
 
-    /**
-     * поиск по инвентарному номеру. результат поиска выводит на экран
-     */
+  
     public void searchByID() {
         System.out.println("Введите инвентарный номер издания");
         String invNumberStr = scanner.nextLine();
@@ -266,9 +246,6 @@ public class ConsoleUI implements View {
         }
     }
 
-    /**
-     * окончание работы
-     */
     public void finish() {
         System.out.println("сохранить изменения в БД? (Y - да/любой символ - нет)");
         String choice = scanner.nextLine();
@@ -279,11 +256,6 @@ public class ConsoleUI implements View {
         work = false;
     }
 
-    /**
-     * создание автора
-     *
-     * @return объект класса Person
-     */
     private Person createAuthor() {
         System.out.println("Введите фамилию автора");
         String firstName = scanner.nextLine();
