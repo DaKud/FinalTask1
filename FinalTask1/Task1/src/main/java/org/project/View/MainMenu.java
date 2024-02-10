@@ -5,9 +5,6 @@ import org.project.View.Commands.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * основное меню для работы с репозиторием
- */
 public class MainMenu {
     private List<Commands> mainMenu;
 
